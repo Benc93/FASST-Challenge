@@ -1,4 +1,4 @@
-FASST Challenge: Architect Badge Test
+FAAST Challenge: Architect Badge Test
 ===============
 ##Briefing
   
