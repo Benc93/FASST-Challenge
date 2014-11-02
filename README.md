@@ -31,7 +31,8 @@ With only three classes, the map for the Domain would be simple, without sacrifi
 | Must be able to arrive/depart from a station  |               |
 | Must NOT admit touched out passengers         |               | 
 | Must NOT admit passengers to a full train     |               | 
-  
+    
+    
 **Station**  
   
 | Responsibilities                              | Collaberators |
@@ -40,7 +41,8 @@ With only three classes, the map for the Domain would be simple, without sacrifi
 | Must allow trains to arrive/depart            | Passenger     |
 | Must allow passengers to 'Touch in/out'       |               |
 | Bonus: Must prevent touch-ins with <£2 GBP    |               |
-  
+    
+    
 **Passenger**  
   
 | Responsibilities                              | Collaberators |
@@ -50,7 +52,7 @@ With only three classes, the map for the Domain would be simple, without sacrifi
 | Must be able to arrive/depart from a station  |               |
 | Bonus: Must be able to hold money             |               |
     
-  
+    
 ## Execution
   
 I built my classes in the following order: **Passenger**, **Station**, and **Train**.
@@ -62,6 +64,6 @@ Further work on the project might include:
 + Searching for common functionality, if necessary writing a module to reduce code repetition.  
 + Extended use of doubles in leiu of co-operating class instances for tests.  
 + Extending the scope of the system to increase/reduce train capacity (defined as multiples of coaches), and/or perhaps adding a Ticket Office to handle adding funds to passengers.  
-
-
+   
+   
 **END**
