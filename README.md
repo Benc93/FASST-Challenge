@@ -20,7 +20,7 @@ Whilst **Coach** is a noun and could possibly be included as a class in future v
   
 With only three classes, the map for the Domain would be simple, without missing any capabilities on the original brief. The CRC cards were build up as follows:  
 
-| Train                                                         |
+| Train                                         |                |
 | --------------------------------------------- |---------------|
 | Responsibilities                              | Collaberators |
 | --------------------------------------------- |---------------|
