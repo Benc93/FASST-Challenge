@@ -40,7 +40,7 @@ describe Station do
     it 'know if a passenger has touched in' do
       station.receive(passenger)
       station.receive(active_passenger)
-      expect(station.head_count).to eq(2)   #because i've received 2 passengers
+      expect(station.head_count).to eq(2)   #because i've received 2 passengers total
       expect(station.active_passengers).to eq(active_passenger) #because only 1 has touched in
     end
 
