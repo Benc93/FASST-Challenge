@@ -31,6 +31,14 @@ require 'passenger'
       passenger.remove_funds
       expect{passenger.touch_in!}.to raise_error(RuntimeError)
      end
+
+     it 'not be in the station on initialization' do
+      expect(passenger).not_to be_in_station
+     end
+
+     it 'not to be on a train on initialization' do 
+      expect(passenger).not_to be_in_train
+     end 
     
     end
   end 

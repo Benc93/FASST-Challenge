@@ -1,20 +1,23 @@
 class Station
 
   def initialize
-    @passengers        = []
-    @trains            = []
-  end
-
-  def head_count
-    @passengers.count
+    @station_passengers   = []
+    @trains               = []
   end
 
   def receive(passenger)
-    @passengers << passenger
+    passenger.in_station!
+    @station_passengers << passenger
   end
 
   def eject(passenger)
-    @passengers.delete(passenger)
+    passenger.touch_out!
+    passenger.out_station!
+    @station_passengers.delete(passenger)
+  end
+
+  def head_count
+    @station_passengers.count
   end
 
   def train_count
@@ -22,27 +25,33 @@ class Station
   end
 
   def arrive(train)
+    train.in_station!
     @trains << train
   end
 
   def depart(train)
+    train.out_station!
     @trains.delete(train)
   end
 
   def active_passengers
-      @passengers.find {|passenger| passenger.touched_in? }
+      @station_passengers.find {|passenger| passenger.touched_in? }
   end
 
   def active_passengers_count
-      @passengers.count {|passenger| passenger.touched_in? }
+      @station_passengers.count {|passenger| passenger.touched_in? }
   end
  
   def passive_passengers
-      @passengers.reject {|passenger| passenger.touched_in? }
+      @station_passengers.reject {|passenger| passenger.touched_in? }
   end
 
-  def swipe_in(passenger)
+  def swipe_in
      passive_passengers.each {|passenger| passenger.touch_in! }
+  end
+
+  def swipe_out(passenger)
+     active_passengers.each {|passenger| passenger.touch_out! }
   end
 
 end

@@ -2,11 +2,21 @@ class Passenger
 
   def initialize
     touch_out!
-    give_funds
+    get_funds
+    out_station!
+    out_train!
   end
 
   def touched_in?
     @touched_in
+  end
+
+  def in_train?
+    @train
+  end
+
+  def in_station?
+    @station
   end
 
   def touch_in!
@@ -22,7 +32,7 @@ class Passenger
     @funds
   end
 
-  def give_funds
+  def get_funds
     @funds = 1 + rand(10)
   end
 
@@ -33,5 +43,22 @@ class Passenger
   def fixed_funds
     @funds = 2
   end
+
+  def in_station!
+    @station = true
+  end
+
+  def in_train!
+    @train = true
+  end
+
+  def out_station!
+    @station = false
+  end
+
+  def out_train!
+    @train = false
+  end
+
 
 end 
