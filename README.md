@@ -14,17 +14,17 @@ The Challenge was to design a simple underground train network called FAAST (Fas
   
 ##Analysis
   
-Based on the briefing, I identified the following classes: *Train*, *Passenger*, and *Station*.  
+Based on the briefing, I identified the following classes: **Train**, **Passenger**, and **Station**.  
   
-Whilst *Coach* is a noun and could possibly be included as a class in future versions, I felt that its only addition to the scope of the brief was to define capacity, which could easily  be set as an instance variable within the *Train* class and was therefore omitted.  
+Whilst **Coach** is a noun and could possibly be included as a class in future versions, I felt that its only addition to the scope of the brief was to define capacity, which could easily  be set as an instance variable within the **Train** class and was therefore omitted.  
   
 With only three classes, the map for the Domain would be simple, without missing any capabilities on the original brief. The CRC cards were build up as follows:  
 
-| Train                             |
-| ----------------- |:-------------:|
-| Responsibilities  | Collaberators |
-| ----------------- |:-------------:|
-|                   | Station       | 
-|                   | Passenger     |
-|                   |               |
+| Train                                                         |
+| --------------------------------------------- |:-------------:|
+| Responsibilities                              | Collaberators |
+| --------------------------------------------- |:-------------:|
+| Must allow passengers to board/alight         | Station       | 
+| Must have a pre defined capacity              | Passenger     |
+| Must be able to arrive/depart from a station  |               |
 
