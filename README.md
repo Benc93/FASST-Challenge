@@ -18,7 +18,7 @@ Based on the briefing, I identified the following classes: **Train**, **Passenge
   
 Whilst **Coach** is a noun and could possibly be included as a class in future versions, I felt that its only addition to the scope of the brief was to define the capacity of train instances, which could easily be set as an instance variable within the **Train** class and was therefore omitted.  
 
-Equally, whilst a **Touch-In Station** would serve as a class, its only function would be to 'touch in/out' passengers which could easily be delivered under the **Station** with no loss of scope, even with the addition of a payments system. 
+Equally, whilst a **Touch-In Station** might serve as a class, its only function would be to 'touch in/out' passengers which could easily be delivered as a method under the **Station** with no loss of scope, even with the addition of a payments system. 
   
 With only three classes, the map for the Domain would be simple, without sacrificing any capabilities on the original brief. The CRC cards were built up as follows:  
 
