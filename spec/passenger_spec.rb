@@ -1,6 +1,7 @@
 require 'passenger'
 
   describe Passenger do 
+
     context 'A passenger should:' do
 
       let (:passenger) {Passenger.new}
@@ -10,11 +11,13 @@ require 'passenger'
      end
 
      it 'be able to touch in' do 
+     passenger.fixed_funds
      passenger.touch_in!
      expect(passenger).to be_touched_in
      end
 
      it 'be able to touch out' do
+     passenger.fixed_funds
      passenger.touch_in!
      passenger.touch_out!
      expect(passenger).not_to be_touched_in

@@ -23,11 +23,15 @@ class Passenger
   end
 
   def give_funds
-    @funds = 2
+    @funds = 1 + rand(10)
   end
 
   def remove_funds
     @funds = 0
+  end
+
+  def fixed_funds
+    @funds = 2
   end
 
 end 

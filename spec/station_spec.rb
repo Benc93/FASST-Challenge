@@ -1,12 +1,13 @@
 require 'station'
 
 describe Station do
-  context 'A station should' do 
+  context 'A station should:' do 
 
     let(:train)                {double :train}
     let(:station)              {Station.new}
     let(:passenger)            {Passenger.new}
     let(:active_passenger)     {double :passenger, touched_in?: true}
+    # let(:rich_passenger)       {Passenger.new(:@funds => 2 )}
 
     it 'not contain anything on instantiation' do
       expect(station.head_count).to eq(0)
@@ -41,10 +42,11 @@ describe Station do
       station.receive(passenger)
       station.receive(active_passenger)
       expect(station.head_count).to eq(2)   #because i've received 2 passengers total
-      expect(station.active_passengers).to eq(active_passenger) #because only 1 has touched in
+      expect(station.active_passengers_count).to eq(1) #because only 1 has touched in
     end
 
-    it 'should let passengers touch in after they enter' do 
+    it 'let passengers touch in after they enter' do 
+      passenger.fixed_funds
       station.receive(passenger)
       expect(station.active_passengers_count).to eq(0)
       station.swipe_in(passenger)

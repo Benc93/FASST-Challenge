@@ -36,9 +36,13 @@ class Station
   def active_passengers_count
       @passengers.count {|passenger| passenger.touched_in? }
   end
+ 
+  def passive_passengers
+      @passengers.reject {|passenger| passenger.touched_in? }
+  end
 
   def swipe_in(passenger)
-     @passengers.each {|passenger| passenger.touch_in! }
+     passive_passengers.each {|passenger| passenger.touch_in! }
   end
 
 end

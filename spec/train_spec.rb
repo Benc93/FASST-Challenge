@@ -2,7 +2,7 @@ require 'train'
 
   describe Train do
     
-   context 'A train should' do 
+   context 'A train should:' do 
 
     let(:train)                {Train.new}
     let(:station)              {Station.new}
