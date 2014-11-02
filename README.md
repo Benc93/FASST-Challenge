@@ -23,6 +23,7 @@ Equally, whilst a **Touch-In Station** would serve as a class, its only function
 With only three classes, the map for the Domain would be simple, without sacrificing any capabilities on the original brief. The CRC cards were built up as follows:  
 
 **Train**  
+  
 | Responsibilities                              | Collaberators |
 | :-------------------------------------------- |:--------------|
 | Must allow passengers to board/alight         | Station       | 
@@ -32,6 +33,7 @@ With only three classes, the map for the Domain would be simple, without sacrifi
 | Must NOT admit passengers to a full train     |               | 
   
 **Station**  
+  
 | Responsibilities                              | Collaberators |
 | :-------------------------------------------- |:--------------|
 | Must allow passengers to enter/leave          | Train         | 
@@ -40,6 +42,7 @@ With only three classes, the map for the Domain would be simple, without sacrifi
 | Bonus: Must prevent touch-ins with <£2 GBP    |               |
   
 **Passenger**  
+  
 | Responsibilities                              | Collaberators |
 | :-------------------------------------------- |:--------------|
 | Must be able to 'Touch in/out'                | Station       | 
