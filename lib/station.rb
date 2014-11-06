@@ -1,5 +1,7 @@
 class Station
 
+  attr_accessor :station_passengers
+
   def initialize
     @station_passengers   = []
     @trains               = []

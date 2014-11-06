@@ -1,24 +1,26 @@
 
 class Train
 
+  attr_accessor :train_passengers
+
   def initialize
     @train_passengers     = []
     @coaches              = 3
     @coach_capacity       = 40
-    # @train_capacity = @coaches * @coach_capacity
-    out_station!
   end
 
   def head_count
     @train_passengers.count
   end
 
-  def board(passenger) 
+  def board(passenger, station)
+
     raise "Oi - no fare dodgers" unless passenger.touched_in?
     raise "Sorry, this train is full" if train_full?
     passenger.in_train!
     passenger.out_station!
-    @train_passengers << passenger
+    @train_passengers << passenger 
+    station.station_passengers.delete(passenger)
   end
 
   def station_check(train)
@@ -30,9 +32,10 @@ class Train
     # train.board(station.active_passengers)
   end
 
-  def alight(passenger)
+  def alight(passenger, station)
     passenger.out_train!
     passenger.in_station!
+    station.station_passengers << passenger
     @train_passengers.delete(passenger)
   end
   

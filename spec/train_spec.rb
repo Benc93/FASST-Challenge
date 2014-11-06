@@ -11,7 +11,7 @@ require 'train'
 
     #helper method to fill the train full of passengers
     def fill_train(train)
-          120.times { train.board(active_passenger) }
+          120.times { train.board(active_passenger, station) }
     end
 
     
@@ -20,13 +20,13 @@ require 'train'
     end
 
     it 'should know if a passenger has touched in' do 
-      expect{train.board(passenger)}.to raise_error(RuntimeError)
+      expect{train.board(passenger, station)}.to raise_error(RuntimeError)
     end
 
     it 'allow touched in passengers to board' do 
       allow(active_passenger).to receive(:in_train!)
       allow(active_passenger).to receive(:out_station!)
-      train.board(active_passenger)
+      train.board(active_passenger, station)
       expect(train.head_count).to eq (1)
     end
 
@@ -35,9 +35,9 @@ require 'train'
       allow(active_passenger).to receive(:out_station!)
       allow(active_passenger).to receive(:out_train!)
       allow(active_passenger).to receive(:in_train!)
-      train.board(active_passenger)
+      train.board(active_passenger, station)
       expect(train.head_count).to eq (1)
-      train.alight(active_passenger)
+      train.alight(active_passenger, station)
       expect(train.head_count).to eq (0)
     end
 
@@ -53,7 +53,7 @@ require 'train'
       allow(active_passenger).to receive(:out_station!)
       allow(active_passenger).to receive(:in_train!)
       fill_train(train)
-      expect{train.board(active_passenger)}.to raise_error(RuntimeError)
+      expect{train.board(active_passenger, station)}.to raise_error(RuntimeError)
     end
 
     it 'must NOT allow passengers to board from anywhere but a station' do

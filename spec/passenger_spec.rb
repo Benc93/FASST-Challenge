@@ -24,10 +24,10 @@ require 'passenger'
      end
 
      it 'be assigned money on instantiation' do 
-      expect(passenger.funds).to be > 0
+      expect(passenger.funds).to be >= 0
      end
 
-     it 'not be able to be able to touch in if funds are too low' do 
+     it 'not be able to touch in if funds are too low' do 
       passenger.remove_funds
       expect{passenger.touch_in!}.to raise_error(RuntimeError)
      end
