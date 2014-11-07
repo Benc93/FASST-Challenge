@@ -5,7 +5,7 @@ FAAST Challenge: Architect Badge Test
 The Challenge was to design a simple underground train network called FAAST (Fast And Accessible Super Tube) with the following capabilities:  
   
 1. The system must contain trains  
-2. Trains can travel between stations   
+2. Trains can exit and enter stations   
 3. Inside the stations, passengers must be able to alight and board the train  
 4. A passenger must 'touch in' and 'touch out' of their station  
 5. Each coach has a maximum passenger capacity  
@@ -57,12 +57,15 @@ With only three classes, the map for the Domain would be simple, without sacrifi
   
 I built my classes in the following order: **Passenger**, **Station**, and **Train**.
 
-The test files are located in the 'spec' folder, and the class files in the 'lib' folder. The files were built using Test Driven Development principles (Red > Green > Refactor). 
+The test files are located in the 'spec' folder, and the class files in the 'lib' folder. The files were built using Test Driven Development principles (Red > Green > Refactor).
+
+There was a peer review process after the weekend for fellow students to: review my code & tests; highlight possible improvement areas; and give insight into their take on the challenge. This was enormously helpful as a learning exercise, and led to some late stage refactoring and an increased use of doubles in the test files. 
   
 Further work on the project might include: 
   
-+ Searching for common functionality, if necessary writing a module to reduce code repetition.  
-+ Extended use of doubles in leiu of co-operating class instances for tests.  
++ Searching for common functionality, where necessary writing a module to reduce code repetition.  
++ Extended use of doubles in leiu of co-operating class instances for tests.   **(Completed during peer review)**
++ Building multiple stations and activity between them. 
 + Extending the scope of the system to increase/reduce train capacity (defined as multiples of coaches), and/or perhaps adding a Ticket Office to handle adding funds to passengers.  
    
    
