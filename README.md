@@ -1,4 +1,4 @@
-FAAST Challenge: Architect Badge Test
+End of Week 2 Challenge: FAAST
 ===============
 ##Briefing
   
